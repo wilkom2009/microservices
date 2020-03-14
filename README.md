@@ -1,20 +1,48 @@
 # Microservices cloud
-> This project  !
+> Build Microservices cloud components from scratch using Spring boot Cloud.
 
 ## Table of contents
 * [General info](#general-info)
 * [Technologies](#technologies)
 * [Setup](#setup)
-* [Features](#features)
+* [Microservices](#microservices)
 * [Status](#status)
 * [Inspiration](#inspiration)
 * [Contact](#contact)
 
 ## General info
-This project helps improve many features of microservices using Spring Cloud. We implement through it communication beetween Components, client side load balancing, dynamic scaling, distributed tracing and microservices fault tolerance.  Add more general information about project. What the purpose of the project is? Motivation?
+This project helps improve many features of microservices using Spring Cloud. We implement through it communication beetween Components, client side load balancing, dynamic scaling, distributed tracing and microservices fault tolerance.
 The use case of this project is Currency conversion.
 
+## Technologies
+* Spring boot - version : 2.1.3.RELEASE
+* Spring boot Actuator
+* Spring data Jpa
+* Spring Cloud - version : Greenwich.RELEASE
+* Spring Cloud Config
+* Spring Cloud Bus
+* Spring Cloud OpenFeign
+* Spring Cloud Netflix (Zuul, Eureka, Hystrix, Ribbon)
+* Spring Cloud AMQP
+* Spring Cloud Sleuth
+* Zipkin
 
+## Microservices
+### spring-cloud-config-server
+> Server application where Spring Cloud Config Server is configured, it contains the local git repository including all the client microservices microservice-name.properties
+
+Main class `SpringCloudConfigServerApplication.java`
+
+### limits-service
+> Microservice created to test centralized configuration, multiple environment config, Profiles config and connection to the `spring-cloud-config-server` microservice. In this project we also implement Fault Tolerance using Hystrix
+
+### netflix-eureka-naming-service
+### currency-exchange-service
+### currency-conversion-service
+### netflix-zuul-api-gateway-service
+
+
+Spring Cloud Config Server
 Establishing Communication between Microservices
 Centralized Microservice Configuration with Spring Cloud Config Server
 Using Spring Cloud Bus to exchange messages about Configuration updates
