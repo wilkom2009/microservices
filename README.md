@@ -37,8 +37,14 @@ Main class `SpringCloudConfigServerApplication.java`
 > Microservice created to test centralized configuration, multiple environment config, Profiles config and connection to the `spring-cloud-config-server` microservice. In this project we also implement Fault Tolerance using Hystrix
 
 ### netflix-eureka-naming-service
+> Microservice created to test centralized configuration, multiple environment config, Profiles config and connection to the `spring-cloud-config-server` microservice.
+
 ### currency-exchange-service
+> Microservice created to expose currency exchange features, and connect to a database using jpa. `spring-cloud-config-server` microservice.
+
 ### currency-conversion-service
+> Client Microservice created as a consumer of currency-exchange-service features. In this microservice, we implement how to easily connect client microservice (consumer) to REST API using Spring Cloud OpenFeign.   that consume the test centralized configuration, multiple environment config, Profiles config and connection to the `spring-cloud-config-server` microservice.
+
 ### netflix-zuul-api-gateway-service
 
 
